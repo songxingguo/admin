@@ -1,28 +1,47 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="cover"></div>
+    <Header></Header>
+    <Todo></Todo>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import Header from './components/todo/header'
+  import Footer from './components/todo/footer'
+  import Todo from './components/todo/todo'
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  export default {
+    components: {
+      Header,
+      Footer,
+      Todo
+    }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  #app {
+    position: relative;
+    height: 100%;
+    background: url("./assets/images/bg.png") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: red;
+    z-index: 0;
+  }
+  #cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #999;
+    opacity: .5;
+    z-index: -1;
+  }
 </style>
