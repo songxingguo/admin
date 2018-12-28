@@ -8,9 +8,9 @@
 </template>
 
 <script>
-  import Header from './components/todo/header'
-  import Footer from './components/todo/footer'
-  import Todo from './components/todo/todo'
+  import Header from './../../components/todo/header'
+  import Footer from './../../components/todo/footer'
+  import Todo from './../../components/todo/todo'
 
   export default {
     components: {
@@ -22,15 +22,10 @@
 </script>
 
 <style>
-  html, body {
-    height: 100%;
-    margin: 0;
-  }
   #app {
-    position: absolute;
-    width: 100%;
+    position: relative;
     height: 100%;
-    background: url("./assets/images/bg.png") no-repeat;
+    background: url("./../../assets/images/bg.png") no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -38,7 +33,7 @@
     z-index: 0;
   }
   #cover {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
     background-color: #999;
