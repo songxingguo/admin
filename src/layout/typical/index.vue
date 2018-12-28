@@ -6,12 +6,16 @@
             v-model="collapsed"
     >
       <div class="logo" />
-      <a-menu theme="dark" mode="inline" :defaultSelectedKeys="['1']"
+      <a-menu theme="dark" modse="inline" :defaultSelectedKeys="['1']"
               @click="menuClick">
-        <a-sub-menu key="2">
-          <span slot="title"><a-icon type="eye-o" /><span>我的</span></span>
-          <a-menu-item key="2-1">待办事项列表</a-menu-item>
-        </a-sub-menu>
+        <a-menu-item key="1">
+          <a-icon type="user" />
+          <span>待办事项列表</span>
+        </a-menu-item>
+        <!--<a-sub-menu key="2">-->
+          <!--<span slot="title"><a-icon type="eye-o" /><span>我的</span></span>-->
+          <!--<a-menu-item key="2-1">待办事项列表</a-menu-item>-->
+        <!--</a-sub-menu>-->
       </a-menu>
     </a-layout-sider>
     <a-layout>
@@ -39,7 +43,7 @@
       menuClick({key}) {
         const parentPath = '/main'
         const targetPath = {
-          1: 'dashboard',
+          1: '/todo',
           '2-1': '/todo'
         }[key]
         this.$router.push(`${parentPath}${targetPath}`)
