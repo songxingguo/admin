@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="todoList">
     <div id="cover"></div>
     <Header></Header>
     <Todo></Todo>
@@ -22,14 +22,13 @@
 </script>
 
 <style>
-  #app {
+  #todoList {
     position: relative;
     height: 100%;
     background: url("./../../assets/images/bg.png") no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    background-color: red;
     z-index: 0;
   }
   #cover {
